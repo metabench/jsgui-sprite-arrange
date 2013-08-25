@@ -2,7 +2,7 @@ if (typeof define !== 'function') {
     var define = require('amdefine')(module);
 }
 
-define(['jsgui-lang-essentials', 'fs', 'path', 'jsgui-node-file-metadata', './rectangle_sheet.js'], 
+define(["jsgui-lang-essentials", "fs", "path", "jsgui-node-file-metadata", "rectangle_sheet.js"], 
     function(jsgui, fs, path, jsgui_file_metadata, RectangleSheet) {
         var tof = jsgui.tof, each = jsgui.each;
         var stringify = jsgui.stringify;
@@ -87,7 +87,7 @@ define(['jsgui-lang-essentials', 'fs', 'path', 'jsgui-node-file-metadata', './re
             'from_files': function(sources_path, callback) {
                 // could process these files sequentially when there is an array of them.
                 var that = this;
-                //console.log('source_path ' + source_path);
+                //console.log('sources_path ' + sources_path);
                 //console.log('tof(source_path) ' + tof(source_path));
                 
                 // load the files' metadata
@@ -100,8 +100,9 @@ define(['jsgui-lang-essentials', 'fs', 'path', 'jsgui-node-file-metadata', './re
                 
                 jsgui_file_metadata.from_file(sources_path, function(err, res_metadata) {
                     // need to separate out the images.
-                    
+                    //console.log('res_metadata ' + stringify(res_metadata));
                     var arrangement = that.from_metadata(res_metadata);
+                    //console.log('arrangement ' + stringify(arrangement));
                     callback(null, arrangement);
                     
                     
@@ -112,7 +113,7 @@ define(['jsgui-lang-essentials', 'fs', 'path', 'jsgui-node-file-metadata', './re
             
             },
             'from_metadata': function(metadata) {
-                
+                console.log('from_metadata ' + metadata);
             
                 // sort them by extensions.
                 var arr_images = [];
@@ -151,9 +152,22 @@ define(['jsgui-lang-essentials', 'fs', 'path', 'jsgui-node-file-metadata', './re
                 
                 //this.sheet =  new RectangleSheet({width:totalWidth, height: maxHeight});
                 var rs = new RectangleSheet({'width': totalWidth, 'height': maxHeight});
+                //console.log('pre pack');
+
+                //console.log('arr_images')
+
+                var packed = rs.pack(arr_images, function(r1, r2) {
+                    console.log('cb packed');
+
+
+                });
+                console.log('post pack');
                 
-                var packed = rs.pack(arr_images);
+                // when packed... need to also have the size of the whole result coords.
                 
+                
+                var size = [rs.width, rs.height];
+                var res = [size, packed];
                 /*
                 
                 rs.pack(arr_images, function(packed_images) {
@@ -164,7 +178,7 @@ define(['jsgui-lang-essentials', 'fs', 'path', 'jsgui-node-file-metadata', './re
                 });
                 */
                 
-                return packed;
+                return res;
                 
             }
                

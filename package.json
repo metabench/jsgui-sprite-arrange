@@ -1,27 +1,25 @@
 {
-  "name": "jsgui-sprite-arrange",
-  "description": "Efficiently arranges sprites",
-  "version": "0.3.8",
-  "homepage": "http://github.com/metabench/jsgui-sprite-arrange",
-  "author": {
-    "name": "James Vickers",
-    "email": "james@metabench.com"
-  },
-  "licenses": [
-    {}
-  ],
-  "bin": {
-    "sprite-arrange": "./bin/jsgui-sprite-arrange"
-  },
-  "main": "./jsgui-sprite-arrange.js",
-  "dependencies": {
-    "requirejs": "~2.1.4",
-    "jsgui-lang-essentials": "~0.3.8",
-    "jsgui-node-file-metadata": "~0.3.8",
-    "commander": "~1.1.1",
-    "amdefine": ">=0.0.4"
-  },
-  "engines": {
-    "node": ">=0.8.0"
-  }
+    "name": "jsgui-sprite-arrange",
+    "description": "Efficiently arranges sprites",
+    "version": "0.3.12",
+    "homepage": "http://github.com/metabench/jsgui-sprite-arrange",
+    "author": {
+        "name": "James Vickers",
+        "email": "james@metabench.com"
+    },
+    "licenses": [{}],
+    "bin": {
+        "sprite-arrange": "./bin/jsgui-sprite-arrange"
+    },
+    "main": "./jsgui-sprite-arrange.js",
+    "dependencies": {
+        "requirejs": "~2.1.4",
+        "jsgui-lang-essentials": "~0.3.8",
+        "jsgui-node-file-metadata": "~0.3.8",
+        "commander": "~1.1.1",
+        "amdefine": ">=0.0.4"
+    },
+    "engines": {
+        "node": ">=0.8.0"
+    }
 }
