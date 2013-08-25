@@ -5,7 +5,7 @@ if (typeof define !== 'function') {
 
 
 
-define(["jsgui-lang-essentials", "two_dimensional"], 
+define(["jsgui-lang-essentials", "./two_dimensional"], 
 
 //define(['./jsgui-lang-essentials', 'fs', './jsgui-node-fs2-core', 'temp', 'node-phantom', 'chimera'], 
 //    function(jsgui, fs, fs2, temp, phantom, chimera) {
