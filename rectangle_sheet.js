@@ -1,4 +1,4 @@
-var jsgui = require('jsgui-lang-essentials');
+var jsgui = require('../core/jsgui-lang-essentials');
 var tof = jsgui.tof;
 var clone = jsgui.clone;
 var each = jsgui.each;

@@ -2,7 +2,7 @@ if (typeof define !== 'function') {
     var define = require('amdefine')(module);
 }
 
-define(["jsgui-lang-essentials", "fs", "path", "jsgui-node-file-metadata", "rectangle_sheet.js"], 
+define(["jsgui-lang-essentials", "fs", "path", "jsgui-node-file-metadata", "./rectangle_sheet.js"], 
     function(jsgui, fs, path, jsgui_file_metadata, RectangleSheet) {
         var tof = jsgui.tof, each = jsgui.each;
         var stringify = jsgui.stringify;
