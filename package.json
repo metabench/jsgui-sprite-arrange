@@ -1,7 +1,7 @@
 {
     "name": "jsgui-sprite-arrange",
     "description": "Efficiently arranges sprites",
-    "version": "0.3.33",
+    "version": "0.3.35",
     "homepage": "http://github.com/metabench/jsgui-sprite-arrange",
     "author": {
         "name": "James Vickers",
